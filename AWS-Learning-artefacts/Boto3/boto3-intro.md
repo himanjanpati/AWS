@@ -1,6 +1,6 @@
 ### What is Boto3?
 
-Boto3 is the Amazon Web Services (AWS) SDK for Python which enables to create, configure, and manage AWS services(EC2,S3 amd etc.)
+Boto3 is the Amazon Web Services (AWS) SDK for Python which enables to create, configure, and manage AWS services(EC2,S3 and etc.)
 
 Boto3 is built on the top of a library called Botocore, which the AWS CLI shares. Botocore provides the low-level clients, session and credentials, and configuration data which is configured in aws cli (aws confiure --profile)</br>
 
