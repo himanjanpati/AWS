@@ -11,7 +11,11 @@ Boto3 is built on the top of Botocore by providing its own <b>session, resources
 ```
 pip3 install boto3 --user
 ```
-By default, pip install packages to a system directory(e.g. /usr/local/lib/python3.9) and this requires root privilege. By using --user flag, this will make pip install packages in the home directory instead, which doesn’t require any special privileges.
+By default, pip install packages to a system directory(e.g. /usr/local/lib/python3.9) and this requires root privilege. This will install the package in /usr/local/lib/python3.7/site-packages
+```
+sudo pip3 install boto3
+```
+By using --user flag, this will make pip install packages in the home directory instead, which doesn’t require any special privileges.
 
 configure the aws command line by proving your aws account security credentials, region name, and default output format. In case if you don’t have awscli installed you can install it using the below command.
 
