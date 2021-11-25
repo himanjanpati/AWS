@@ -26,5 +26,26 @@ def upload_file_s3(file_path, bucket_name, object_name=None):
         logging.error(e)
         return False
     return True
-    
+
+def delete_file(bucket_name, object_key):
+
+    s3 = boto3.resource('s3')
+    s3_bucket = s3.Bucket(bucket_name)
+
+    response = s3_bucket.delete_objects(
+        Delete={
+            'Objects': [
+                {
+                    'Key': object_key
+                },
+            ],
+            'Quiet': True
+        }
+    )
+    if response['ResponseMetadata']['HTTPStatusCode'] != 200:
+        print("failed to delete file")
+    else:
+        print("deletion success!!")
+
 upload_file_s3("<path to file>", "<bucket_name>")
+
