@@ -49,3 +49,4 @@ def delete_file(bucket_name, object_key):
 
 upload_file_s3("<path to file>", "<bucket_name>")
 
+delete_file('<bucket_name>', '<file_name with ext>')
