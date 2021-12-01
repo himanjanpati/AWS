@@ -1,3 +1,16 @@
+### <b> AWS IAM </b>
+
+
+<i>AWS IAM best practice for EC2</i>
+- We can create an IAM role for an EC2 instance and attach the role to EC2
+- The aws configure way of adding the IAM credentials should not be followed while accessing AWS services from EC2, other policies could be added to same EC2 role and can be assigned to EC2 instance.
+
+
+
+
+
+
+
 ### <b>AWS EC2</b>
 
 <i>EC2 public and private IP</i>
