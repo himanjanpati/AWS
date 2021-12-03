@@ -1,3 +1,6 @@
+###
+
+
 ### <b> AWS IAM </b>
 
 
@@ -27,3 +30,11 @@
 - Elastic IP creation and association is not a good architecture consideration.
 - The alteranative option is to have random public IP and a DNS registered to the same (Route 53)
 - Best case is to use LB (load balancer) without a public ip at all.
+
+- Three types of EC2 instance purchase options; On-demand, Reserved, Spot and dedicated host
+- Reserved (min 1 year)
+    - Reserved instances : long workloads (ex- DB)
+    - Convertible reserved instances : long workloads with flexible instances
+    - Scheduled reserved instances (deprecated): we can schedule based on need (ex- every thu between 3-6PM)
+- Spot Instances - short workloads, can be taken by AWS any time based on demand cheap pricing (less reliable)
+- dedcicated host - book the entire physical server and control instance placement
