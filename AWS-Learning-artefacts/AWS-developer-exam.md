@@ -31,10 +31,43 @@
 - The alteranative option is to have random public IP and a DNS registered to the same (Route 53)
 - Best case is to use LB (load balancer) without a public ip at all.
 
-- Three types of EC2 instance purchase options; On-demand, Reserved, Spot and dedicated host
-- Reserved (min 1 year)
-    - Reserved instances : long workloads (ex- DB)
-    - Convertible reserved instances : long workloads with flexible instances
+- Three types of EC2 instance purchase options; On-demand, Reserved, Spot and dedicated host</br>
+<b>On-demand</b>:
+    - pay for what you use
+    - Windows and Linux machine - billed per sec after the 1st min 
+    - all other machine types/os - billing per hour
+    - high cost, no upfront 
+    - No long term commitment
+    - </b> recommended for short-term, un-interrupted and unpredictable workloads</b>
+
+- <b>Reserved</b> (min 1 year)
+  
+    - <b>Reserved instances</b> : long runnig/stable workloads (ex- DB)
+    - 75% discount compared to other pricing plans
+  Reserve a specific instance type (ex: t2micro, c5xlarge etc)
+    - used for steady state used applications (ex: self manged k8s cluster using EC2 instance, database)
+    - <b>Convertible reserved instances</b>
+        - long workloads with flexible instances (can change the EC2 instance type t2micro - large etc.)
+        - upto 54% discount
     - Scheduled reserved instances (deprecated): we can schedule based on need (ex- every thu between 3-6PM)
-- Spot Instances - short workloads, can be taken by AWS any time based on demand cheap pricing (less reliable)
-- dedcicated host - book the entire physical server and control instance placement
+
+- <b>Spot Instances</b>
+    - short workloads, can be taken by AWS any time based on demand (if max price is less than the current price) cheap pricing (less reliable)
+    - upto 90% discount
+    - most cost-efficient
+    - useful for workloads resilient to failure (ex: batch jobs, image processing, distributed workloads)
+- <b>dedcicated host</b> 
+    - book the entire physical server and control over instance placement
+    - compliance requirement and existing server bound license
+    - More expensive
+    - At least 3 yrs reservation
+    - useful for org having strong regulatory and compliance need
+- <b> Dedicated instance</b>
+    - instance running on dedicated h/w
+    - may share h/w with other instnace in same account
+    - no control over placement
+
+ Spot instnaces and Spot fleet
+  - define max spot price, get instance when current price < max price
+  - when current price > max price, we can choose either to stop/terminate the instance within 2mins grace period
+  - Spot block: block spot during a specified time frame (1-6hr) without interruptions (wont be avilable post july 2021, wont be supported post 2022)
