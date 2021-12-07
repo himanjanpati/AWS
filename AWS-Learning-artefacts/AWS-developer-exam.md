@@ -70,4 +70,18 @@
  Spot instnaces and Spot fleet
   - define max spot price, get instance when current price < max price
   - when current price > max price, we can choose either to stop/terminate the instance within 2mins grace period
-  - Spot block: block spot during a specified time frame (1-6hr) without interruptions (wont be avilable post july 2021, wont be supported post 2022)
+  - <b>Spot block</b>: block spot during a specified time frame (1-6hr) without interruptions (wont be avilable post july 2021, wont be supported post 2022)
+ 
+ <b> Request and terminate Spot instances </b>
+  
+    Spot instance req
+    - Max price
+    - Desired nos of instances
+    - Launch spec
+    - Request type: one time | Persistent valid from, valid until
+
+  - two types of request for spot instances : <b>One time and persistent request</b>
+  - For a one time spot instance request the instances will be launched as soon as the request will be fullfilled and the spot request will go away a it is one time
+  - For persistent spot instance request the request will remain valid until time. The instances will get relaunched if we will not cancel the spot request itself. 
+  - So the best prictice to spot the presistnet spot instances is to cancel the spot request 1st and then to terminate the instances
+  
