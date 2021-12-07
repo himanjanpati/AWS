@@ -84,4 +84,7 @@
   - For a one time spot instance request the instances will be launched as soon as the request will be fullfilled and the spot request will go away after the instances are launched.
   - For persistent spot instance request the request will remain valid even after the instances are launched (valid unitl). The instances will get relaunched if we will not cancel the spot request itself. 
   - So the best prictice to stop the presistnet spot instances is to cancel the spot request 1st and then to terminate the instances
+  - we can only cancel spot requests with status open, active or disabled
+
+ 
   
