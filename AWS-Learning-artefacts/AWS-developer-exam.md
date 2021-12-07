@@ -81,7 +81,7 @@
     - Request type: one time | Persistent valid from, valid until
 
   - two types of request for spot instances : <b>One time and persistent request</b>
-  - For a one time spot instance request the instances will be launched as soon as the request will be fullfilled and the spot request will go away a it is one time
-  - For persistent spot instance request the request will remain valid until time. The instances will get relaunched if we will not cancel the spot request itself. 
-  - So the best prictice to spot the presistnet spot instances is to cancel the spot request 1st and then to terminate the instances
+  - For a one time spot instance request the instances will be launched as soon as the request will be fullfilled and the spot request will go away after the instances are launched.
+  - For persistent spot instance request the request will remain valid even after the instances are launched (valid unitl). The instances will get relaunched if we will not cancel the spot request itself. 
+  - So the best prictice to stop the presistnet spot instances is to cancel the spot request 1st and then to terminate the instances
   
