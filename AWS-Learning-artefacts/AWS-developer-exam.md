@@ -108,5 +108,12 @@
   - So the best prictice to stop the presistnet spot instances is to cancel the spot request 1st and then to terminate the instances
   - we can only cancel spot requests with status open, active or disabled
 
+ ### <u>Spot Fleets</u>
+ - set of spot instances + (optional) On demand instances
+ - try to meet target capacity with optimal pricing
+
+
+
+
  
   
