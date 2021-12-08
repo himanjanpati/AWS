@@ -16,6 +16,28 @@
 
 ### <b>AWS EC2</b>
 
+**developer exam**</br>
+<i>EC2 fundamentals</i>
+- EC2: Elastic compute cloud(IAAS AWS)
+- Provides the below aws workload integration
+    - Renting VMs
+    - Storing data in virtual drives (EBS)
+    - distributing load accross machines (ELB)
+    - Scale services (ASG)
+- Custom script can be run before provisioning EC2 instances using **User data ** script which is called bootsraping and that will be run using root user privilege
+- bootstraping - running commands while the instance starts
+- The script will be run once while instance starts first
+- what we can do with user data script
+   - installing updates
+   - installing softwares
+   - downloading common files from internet
+   - ex: installing apache serever and hosting a custom html page to show
+
+
+
+
+
+**Solution Architect**</br>
 <i>EC2 public and private IP</i>
 
 - public ip accessible over internet
