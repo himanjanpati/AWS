@@ -89,7 +89,7 @@
     - may share h/w with other instnace in same account
     - no control over placement
 
- Spot instnaces and Spot fleet
+ ### <b><u>Spot instnaces and Spot fleet</u></b>
   - define max spot price, get instance when current price < max price
   - when current price > max price, we can choose either to stop/terminate the instance within 2mins grace period
   - <b>Spot block</b>: block spot during a specified time frame (1-6hr) without interruptions (wont be avilable post july 2021, wont be supported post 2022)
