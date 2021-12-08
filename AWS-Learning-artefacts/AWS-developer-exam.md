@@ -16,7 +16,7 @@
 
 ### <b>AWS EC2</b>
 
-**developer exam**</br>
+**developer exam essentials**</br>
 <i>EC2 fundamentals</i>
 - EC2: Elastic compute cloud(IAAS AWS)
 - Provides the below aws workload integration
@@ -24,6 +24,8 @@
     - Storing data in virtual drives (EBS)
     - distributing load accross machines (ELB)
     - Scale services (ASG)
+
+**user data**
 - Custom script can be run before provisioning EC2 instances using **User data ** script which is called bootsraping and that will be run using root user privilege
 - bootstraping - running commands while the instance starts
 - The script will be run once while instance starts first
@@ -32,6 +34,22 @@
    - installing softwares
    - downloading common files from internet
    - ex: installing apache serever and hosting a custom html page to show
+   
+   ```
+   #!/bin/bash
+   #install httpd
+   yum update
+   yum install -y httpd
+   systemctl start httpd
+   systemctl enable httpd
+   echo "<h1> Hello From EC2 </h1>" > /var/www/html/index.html
+   ````
+
+
+
+**EC2 instance types**
+- t2micro (free tier), t2.xlarge, c5d.4xlarge, r5.16xlarge, m5.8xlarge
+- 
 
 
 
