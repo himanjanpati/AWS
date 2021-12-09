@@ -33,7 +33,7 @@
    - installing updates
    - installing softwares
    - downloading common files from internet
-   - ex: installing apache serever and hosting a custom html page to show
+   - ex: installing apache server and hosting a custom html page to show
 
    ```
    #!/bin/bash
@@ -60,8 +60,9 @@
   micro - size (nano< micro< small< medium< large< xlrage)</br>
   as size increses the compute(CPU, GPU), memory capability increases
 - To create an EC2 instance in a particular AZ, a subnet has to created in the AZ and the EC2 instance has to be placed in that subnet
-- EC2 metadata
+- **EC2 metadata and dynamic data**
   EC2 instance metadata can be accessed using below
+  ex - to show AMI ID, IAM, hostname, mac, local-ipv4, instance type and etc.
   ```
    curl http://169.254.169.254/latest/meta-data
   ```
