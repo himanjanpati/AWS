@@ -54,7 +54,23 @@
    - storage optimised: (D2, D3 instances) high storage i/o operations, High frequency online transaction processing (OLTP) systems, Distributed file systems
    - memory optimised (high memory cache operations, in memory operatiosn ex: redis cache), High-performance databases (relational and NoSQL)
    - GPU optimised (graphices processing workloads ex: media services)
-- t2micro (free tier), t2.xlarge, c5d.4xlarge, r5.16xlarge, m5.8xlarge
+- t2micro (free tier), t2.xlarge, c5d.4xlarge, r5.16xlarge, m5.8xlarge</br>
+  t - instance family</br>
+  2 - generation (AWS changes based on new h/w upgrade improvements in each generation)</br>
+  micro - size (nano< micro< small< medium< large< xlrage)</br>
+  as size increses the compute(CPU, GPU), memory capability increases
+- To create an EC2 instance in a particular AZ, a subnet has to created in the AZ and the EC2 instance has to be placed in that subnet
+- EC2 metadata
+  EC2 instance metadata can be accessed using below
+  ```
+   curl http://169.254.169.254/latest/meta-data
+  ```
+  EC2 instance idenity details :
+  ```
+   curl http://169.254.169.254/latest/dynamic/instance-identity/document
+  ```
+
+
 
 
 
