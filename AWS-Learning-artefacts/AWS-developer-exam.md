@@ -67,6 +67,14 @@
   ```
    curl http://169.254.169.254/latest/dynamic/instance-identity/document
   ```
+- **EC2 security groups**</br>
+  - acts as virtual firewall to control incoming and outgoing traffic to/from AWS resources (EC2 instances, DBs etc.)
+  - security groups are default deny, if no rules configured then no inbound/outbound traffic will be allowed
+  - only allowed traffic can be sepecified, everything else will be denied
+  - separate rules can be configured for inbound and outbound traffic
+  - Upto 5 SGs can be attched to an EC2 instance
+  - SGs are stateful: if a outbound request is allowed then incoming request will be allowed and vice versa
+
 
 
 
