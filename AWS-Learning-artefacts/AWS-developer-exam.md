@@ -44,9 +44,6 @@
    systemctl enable httpd
    echo "<h1> Hello From EC2 </h1>" > /var/www/html/index.html
    ````
-
-
-
 **EC2 instance types**
 - Types of EC2 instances
    - genral purpose
