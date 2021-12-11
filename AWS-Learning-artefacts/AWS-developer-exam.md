@@ -74,6 +74,8 @@
   - separate rules can be configured for inbound and outbound traffic
   - Upto 5 SGs can be attched to an EC2 instance
   - SGs are stateful: if a outbound request is allowed then incoming request will be allowed and vice versa
+  - SGs are lock down to a region/VPC combination (confined to one region and VPC in that region)
+  
 
 
 
