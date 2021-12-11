@@ -76,7 +76,8 @@
   - SGs are stateful: if a outbound request is allowed then incoming request will be allowed and vice versa
   - SGs are lock down to a region/VPC combination (confined to one region and VPC in that region)
   
-
+- AWS elastic IPs are a quick and dirty way of attaching a constant IP/ static IP to an EC2 instance
+- elastic IPs should be released if not attached to any EC2 instance else AWS will charge for allocated elsatic IPs
 
 
 
