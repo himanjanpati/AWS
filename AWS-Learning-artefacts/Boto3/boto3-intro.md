@@ -40,5 +40,14 @@ aws sts get-caller-identity
     "Arn": "arn:aws:iam::123456789:user/aws-cli-admin"
 }
 ```
+boto3 sessions
 
+default session
+```
+session = boto3.session.Session()
+```
+custom session
+```
+custom_session = boto3.session.Session(profile_name="aws-cli-admin")
+```
 
