@@ -49,7 +49,7 @@
    - genral purpose
    - compute optimised: C series instances(c4.large, c5.large etc) high perfomance computing, high CPU then memory ex: Scientific modeling, ML, Batch processing workloads
    - storage optimised: (D2, D3 instances) high storage i/o operations, High frequency online transaction processing (OLTP) systems, Distributed file systems
-   - memory optimised (high memory cache operations, in memory operatiosn ex: redis cache), High-performance databases (relational and NoSQL)
+   - memory optimised: R (R6g, R6gd etc.) and X (X1, X1e etc)(instance family(high memory cache operations, in memory operatiosn ex: redis cache), High-performance databases (relational and NoSQL)
    - GPU optimised (graphices processing workloads ex: media services)
 - t2micro (free tier), t2.xlarge, c5d.4xlarge, r5.16xlarge, m5.8xlarge</br>
   t - instance family</br>
