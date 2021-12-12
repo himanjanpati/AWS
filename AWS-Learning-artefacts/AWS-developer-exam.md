@@ -79,7 +79,11 @@
 - AWS elastic IPs are a quick and dirty way of attaching a constant IP/ static IP to an EC2 instance
 - elastic IPs should be released if not attached to any EC2 instance else AWS will charge for allocated elsatic IPs
 
-
+- **EC2 Launch templates**"
+  - acts as a tmplate to launch an EC2 instance more quick with all preconfigured settings AMI, instance type network settings(VPC, subnet, SG and etc.)
+  - launch templates are regional
+  - use customised AMI to reduce the boot time rather using launch template userdata. 
+  - Customised AMI or OS hardening helps in creating custom images with pre-loaded softwares or patches installed. 
 
 
 
