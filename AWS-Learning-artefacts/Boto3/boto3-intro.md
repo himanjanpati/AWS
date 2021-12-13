@@ -49,5 +49,12 @@ session = boto3.session.Session()
 custom session
 ```
 custom_session = boto3.session.Session(profile_name="aws-cli-admin")
+print(custom_session)
 ```
+
+**boto3 resource and client
+ - boto3 client is the original AWS API abstraction provides low level access to AWS services
+ - boto3 resource is the newer AWS API abstraction provides high level access to AWS servicess
+ - client supports all kind of service operations, resouce does not provide all opearations</br>
+
 
