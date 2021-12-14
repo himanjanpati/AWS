@@ -57,4 +57,31 @@ print(custom_session)
  - boto3 resource is the newer AWS API abstraction provides high level access to AWS servicess
  - client supports all kind of service operations, resouce does not provide all opearations</br>
 
+getting all s3 buckets using resouce api
+```
+import boto3
+s3_resource = boto3.resource('s3')
+#This resuns a collection and could be iterated to get the bucket names 
+all_s3_buckets = s3_resource.buckets.all()
+#returns collection of bucket names and each bucket name could be retieved using '.' operator
+for each_s3 in all_s3_buckets:
+  print(each_s3.name)
+
+#simplifying above
+for s3_bucket in s3_resource.buckets.all():
+  print(s3_bucket.name)
+```
+getting all s3 buckets using client api
+
+```
+import boto3
+
+s3_client = boto3.client('s3')
+dir(s3_client)
+#will show allavileble methods and props 
+#list_buckets methods will show the list of buckets
+#this will return a dictonary which will have all buckets inside 'Buckets' list
+for each_s3 in s3_client.list_buckets()['Buckets']:
+  print(each_s3['Name'])
+```
 
