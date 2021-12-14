@@ -12,8 +12,12 @@ meta allows to leverage the boto3 client and resource both types of apis to use 
 
  ec2 = boto3.resource('ec2')
 
- print(dir(ec2.meta))
- print(ec2.meta.client.describe_regions())
+ #print(dir(ec2.meta))
+ #print(ec2.meta.client.describe_regions())
+ for each_region in ec2.meta.client.describe_regions()['Regions']:
+   print(each_region['RegionName'])
+ ```
+    
 
 
 
