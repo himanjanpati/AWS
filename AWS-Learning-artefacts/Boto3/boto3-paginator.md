@@ -19,5 +19,5 @@ iam_svc = boto3.resource('iam')
 for user in range(1,200):
   user_name = "iam_user"+str(user)
   iam_svc.create_user(UserName=user_name)
-  
+  print(f"{user_name}"+" created successfully")
 ```
