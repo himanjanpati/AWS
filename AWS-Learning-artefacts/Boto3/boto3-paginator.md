@@ -12,5 +12,12 @@ Retriving all IAM users using boto3 client
 Note - for better illustration, 200 IAM users have been created using below script
 
 ```
+import boto3
 
+iam_svc = boto3.resource('iam')
+
+for user in range(1,200):
+  user_name = "iam_user"+str(user)
+  iam_svc.create_user(UserName=user_name)
+  
 ```
