@@ -20,4 +20,14 @@ for user in range(1,200):
   user_name = "iam_user"+str(user)
   iam_svc.create_user(UserName=user_name)
   print(f"{user_name}"+" created successfully")
+
+count=0
+for iam_user in iam_svc.users.all():
+  if iam_user.name.startswith('iam_user'):
+    print(iam_user.name)
+    iam_svc.meta.client.delete_user(UserName=iam_user.name)
+    print(f"{iam_user.name}"+"deleted")
+    count+=1
+  
+  print(f"Total {count} users deleted")
 ```
