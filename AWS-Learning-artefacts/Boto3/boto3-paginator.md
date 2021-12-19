@@ -28,6 +28,6 @@ for iam_user in iam_svc.users.all():
     iam_svc.meta.client.delete_user(UserName=iam_user.name)
     print(f"{iam_user.name}"+"deleted")
     count+=1
-  
-  print(f"Total {count} users deleted")
+
+print(f"Total {count} users deleted")
 ```
