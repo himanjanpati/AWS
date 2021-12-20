@@ -31,3 +31,21 @@ for iam_user in iam_svc.users.all():
 
 print(f"Total {count} users deleted")
 ```
+
+showing all users using boto3 resource
+
+The below will show all the iam_users
+
+In this case it shows 202 users as I have 202 users exist in my account
+
+```
+import boto3
+
+count = 0
+iam_svc = boto3.resource('iam')
+for each_user in iam_svc.users.all():
+  print(each_user.name)
+  count+=1
+
+print(f"total users {count}")
+```
