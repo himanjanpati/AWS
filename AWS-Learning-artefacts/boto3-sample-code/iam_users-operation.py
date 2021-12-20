@@ -17,4 +17,35 @@ for iam_user in iam_svc.users.all():
     iam_svc.meta.client.delete_user(UserName=iam_user.name)
     print(f"{iam_user.name}"+"deleted")
     count+=1 
-print(f"total users deleted is {count}")  
+print(f"total users deleted is {count}")
+
+count = 0
+
+iam_client = boto3.client('iam')
+
+paginator = iam_client.get_paginator('list_users')
+all_users = paginator.paginate()
+for each_user in all_users:
+  for each_username in each_user['Users']:
+    print(each_username['UserName'])
+    count+=1
+print(count)
+             
+
+
+
+# for each_user in page_iterator:
+#   print(each_user)
+#   count+=1
+# print(count)
+
+
+# count = 0
+
+# iam_client = boto3.client('iam')
+# all_users = iam_client.list_users()['Users']
+# for each_user in all_users:
+#   print(each_user['UserName'])
+#   count+=1
+# print(f"total Users {count}")
+
