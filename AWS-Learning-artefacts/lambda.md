@@ -19,7 +19,7 @@
 
    example - lambda function handler name for the below would be hello-world.test_handler
 
-   <i><b>filename.handlername<b></i>
+   <i><b>filename.handlername</b></i>
 
    <b>hello-world.py</b>
    ```
