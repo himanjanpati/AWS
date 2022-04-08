@@ -66,7 +66,45 @@
    128mb min and 10GB maximum memory size of lambda function</br>
    15 mins maximum timeout</br>
    512mb min to 10GB max ephemeral storage
-   
+
+   <b>Lambda synchronous invocation </b></br>
+
+   Lamda runs and wait for the response
+
+   using aws console or can be using aws cli 
+
+   ```
+    aws lambda invoke \
+              --cli-binary-format raw-in-base64-out \
+              --function-name hello-lambda \
+              --payload '{ "planet": "Earth" }' \
+              response.json
+
+   ```
+   <b>Lambda asynchronous invocation </b></br>
+
+   - AWS services integarted with lambda will not wait till lambda gives an response
+
+   - The invocation type is event 
+   ```
+   aws lambda invoke \
+   --cli-binary-format raw-in-base64-out \
+   --function-name hello-lambda \
+   --payload '{"key": "value"}' \
+   --invocation-type Event \
+   response.json
+
+   ```
+   - lambda retries 2 times post the failure/exception in the function.
+   -  2nd attempt will be retried (post 1st failure) after 1 min and 3rd will be after 2mins of 2nd attempt.</br>
+   ex: 1st failure - 00:00</br>
+       2nd attempt - ~00:01</br>
+       3rd attempt - ~00:03
+
+   - Then lambda sends the message to SQS/SNS based on the type of DLQ configured
+
+
+
 - 5 compoments of serverless framework
   - functions
      - unit of deployment
@@ -83,3 +121,7 @@
      - project file (serverless.yaml) contains all functions/endpoints/handlers 
   - plugins
      - extends the framework
+
+
+
+
