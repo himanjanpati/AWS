@@ -7,6 +7,7 @@
    - s3 bucket
      - caching static contents at the edge
      - OAI (origin access identity) allows s3 bucket to allow traffic from cloudfront and no where else
+     principal block will be added with OAI ID in s3 bucket policy
      - cloudfront acts as an ingress to allow traffic from anywhere
   - Custom Origin
     - ALB
