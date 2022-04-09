@@ -42,6 +42,6 @@
   - S3 bucket webseite does not support https
 - CloudFront signed URLs, signed cookie
   - signed url used for paid shared contenets/ users having the signed in URL can have access to contents via cloudfront. Access each file could be given using one signed URL
-  - key group is used for signed URLs to encry
+  - key group is used to geenrate the signed URLs
   - signed cookie - used for giving access to private content (private to user) and only one signed cookie is needed for multiple contents
 - S3 presigned url is used direct acess to S3 bucket contents when user have the pre-signed URLs for s3 (valid for short time)
