@@ -27,7 +27,11 @@
   - caching could be used for below
     - headers (Http)
     - Query strings
-    - 
+    - Session cookies
+  - cache lives in each edge locations
+  - Use longer TTL (min 1 sec day to 1 year) for maximum cache hit
+  - maximize hit by separating the static and dynamic distributions
+  - cloudfront invalodations could is used to update the contents/cache when static file changes are made to S3 contents
 - <b>CloudFront Security</b>
   - Georestriction - access based on region/countries
   - only allowing over HTTPS
