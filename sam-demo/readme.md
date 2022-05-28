@@ -5,6 +5,6 @@ project
   commands.sh
   template.yaml
 
-2- create the s3 bucket
-3- package cloudformation
-4- deploy the cloudformation
+2- create the s3 bucket</br>
+3- package cloudformation</br>
+4- deploy the cloudformation</br>
