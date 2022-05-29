@@ -7,7 +7,13 @@ Resources:
     Properties:
       Handler: app.lambda_handler
       Runtime: python3.8
-      CodeUri: s3://himanjan-code-sam/8b3aa8e3c73869738cbe4a6aaaf36898
+      CodeUri: s3://himanjan-code-sam/be5d01111cc169a11b5e20b44093bb04
       Description: A starter lambda function
       MemorySize: 128
       Timeout: 3
+      Events:
+        HelloWorldSAMAPI:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: GET
