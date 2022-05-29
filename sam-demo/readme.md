@@ -11,6 +11,7 @@ project
 
 <b>Permissions for EC2 assume role</b>
 
+```
 lambda:UpdateFunctionCode
 lambda:GetFunction
 lambda:ListTags
@@ -19,3 +20,4 @@ lambda:RemovePermission
 apigateway:POST
 apigateway:PATCH
 apigateway:GET
+```
