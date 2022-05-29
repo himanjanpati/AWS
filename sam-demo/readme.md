@@ -16,8 +16,10 @@ lambda:UpdateFunctionCode
 lambda:GetFunction
 lambda:ListTags
 lambda:AddPermission
-lambda:RemovePermission 
+lambda:RemovePermission
+lambda:UpdateFunctionConfiguration 
 apigateway:POST
 apigateway:PATCH
 apigateway:GET
+dynamodb:fullaccess
 ```
