@@ -165,7 +165,25 @@
  - try to meet target capacity with optimal pricing
 
 
+### <b>AWS CloudWatch</b> ###
 
+ - monitoring and observability 
+ - integrates with most of the aws services to clollect logs, metrics and events
+ - can be enabled detail monitoring with extra cost
+ - also provides search, alarm, notification and visualisation</br>
+ __example metrices from different services__
+    - __ELB__ - HTTPCode_Target_2XX_Count, HTTPCode_Target_4XX_Count,UnHealthyHostCount
+    - __DynamoDB__ - AccountProvisionedReadCapacityUtilization, AccountProvisionedWriteCapacityUtilization, ConsumedReadCapacityUnits, ConsumedWriteCapacityUnits
+    - __EC2__ - CPUUtilization, NetworkIn, NetworkOut, StatusCheckFailed_System, StatusCheckFailed_Instance
+    - __Lambda__ - Throlttle, ConcurrentExecutions, Duration
+    - __API Gateway__ - 4XXErrors, 5XXErrors, CacheHitCount, CacheMissCount, Count, Integrationatency( how long the backend takes), Latency
+- Cloud watch alarms are set for metrices and cloud watch events are related to events on resourecs
+  
+  - __period__ - Length of time to evaluate the metric to create one data point.
+  example - 5mins (300s) period for evaluation makes one data point. It could be 10sec
+  - __Evaluation__ - number of most recent periods or data points to evaluate
+  - __datapoint__ - number of datapoints in evaluation period that should be breaching to trigger the alarm
+   
 
  
   
